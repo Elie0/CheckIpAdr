@@ -22,7 +22,6 @@ $ipForm.addEventListener('submit',(e)=>{
 
 
 socket.on('result',(result)=>{
-    console.log(result)
     const html = Mustache.render(resultsTemplate,{
         validation:result
     })
@@ -30,16 +29,16 @@ socket.on('result',(result)=>{
 
 })
 socket.on('classInfo',(result)=>{
-    console.log(result[1])
+    console.log(result[2])
     const html = Mustache.render(classTemplate,{
         Class:result[0],
-        netmask:result[1]
+        netmask:result[1],
+        defaultsubnet:result[2],
     })
     $display.insertAdjacentHTML('beforeend',html)
 
 })
 socket.on('toBinary',(result)=>{
-    console.log(result)
     const html = Mustache.render(binaryTemplate,{
         binary:result
     })

@@ -45,20 +45,20 @@ const getClass = (ip)=>{
     {
          const send = 'Class C'
          const networkMask = classIndicator[0]+'.'+classIndicator[1]+'.'+classIndicator[2]+'.0'
-         return [send,`network mask: ${networkMask}`]          
+         return [send,`Network Mask: ${networkMask}`,'Default Subnet: 255.255.255.0']          
          
     }
     else if(classIndicator[0] >=128 && classIndicator[0] <=191)
     {
         const send = 'Class B'
          const networkMask = classIndicator[0]+'.'+classIndicator[1]+'.0'+'.0'
-         return [send,`network mask: ${networkMask}`]   
+         return [send,`Network Mask: ${networkMask}`,'Default Subnet: 255.255.0.0']   
     }
     else
     {
         const send = 'Class A'
         const networkMask = classIndicator[0]+'.0'+'.0'+'.0'
-        return [send,`network mask: ${networkMask}`] 
+        return [send,`Network Mask: ${networkMask}`,'Default Subnet: 255.255.0.0'] 
     }
    
 }
