@@ -1,4 +1,4 @@
-const {checkIpAdress,getClass,getBinary,getMask}= require('./functions')
+const {checkIpAdress,getClass,getBinary}= require('./functions')
 const http = require('http')
 const express = require('express')
 const socketio = require('socket.io')
@@ -9,7 +9,6 @@ const io = socketio(server)
 
 const port = process.env.PORT || 3000
 
-const ip =process.argv[2]
 
 io.on('connection',(socket)=>{       // we can use io to communicate with a specific client if i have diff clients it will run many times
     console.log('New Websocket connection')

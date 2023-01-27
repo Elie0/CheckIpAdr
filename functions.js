@@ -80,21 +80,9 @@ const getBinary =(ip)=>{
      return ('BinaryForm:')+binIp
 }
 
-const getMask = (ip) =>{
-    if (checkIpAdress(ip))
-    {
-        const IP = ip.split('.')
-        const binary = getBinary(IP)
-        const Class = getClass(ip)
-        console.log(binary)
-    }
-   
-}
-
 
 module.exports = {
     checkIpAdress,
     getClass,
     getBinary,
-    getMask,
 }
