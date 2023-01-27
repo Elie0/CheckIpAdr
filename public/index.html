@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/styles.css">  
+    <title>Ip checker</title>
+</head>
+
+
+<body>
+    <div class="centered-form">
+          <div class="centered-form__box">
+                    <h1 style="position: relative; left:100px ;">Check ip</h1>
+                    <form id="ip-form">
+                      <label style="position: relative; left:15px ;">Enter your ip</label>
+                      <input type="ip" name="ip" placeholder="ip adress" required>
+                      <label style="position: relative; left:100px ;">Created By Elie Alarou</label>
+                      <button>calculate</button>
+                      <div style="margin-top: 8px;" id="display"></div>
+                    </form>
+          </div>
+    </div>
+
+   <script id="results-template" type="text/html">
+           <p>
+                   <span>{{validation}}</span>
+           </p>
+      </script>
+
+      <script id="Class" type="text/html">
+        <p>
+          <span>{{Class}}</span>
+          <br>
+          <span>{{netmask}}</span>
+        </p>
+    </script>
+
+    <script id="bin" type="text/html">
+      <p>
+        <span>{{binary}}</span>
+      </p>
+  </script>
+
+      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js"></script>
+<script src="/socket.io/socket.io.js"> </script>  <!--used to initialize socketio on client side -->
+<script src="/js/main.js"> </script>
+</body>
+</html>
+
+
+
