@@ -58,7 +58,7 @@ const getClass = (ip)=>{
     {
         const send = 'Class A'
         const networkMask = classIndicator[0]+'.0'+'.0'+'.0'
-        return [send,`Network Mask: ${networkMask}`,'Default Subnet: 255.255.0.0'] 
+        return [send,`Network Mask: ${networkMask}`,'Default Subnet: 255.0.0.0'] 
     }
    
 }
